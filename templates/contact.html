@@ -1,0 +1,30 @@
+{% extends "layout_reg.html" %}
+
+{% block title %}
+    Contact List!
+{% endblock %}
+
+{% block body %}
+	<table class="table">
+	<TH>
+	<TD><b>Name</b></TD>
+	<TD><b>Company</b></TD>
+	<TD><b>Job Title</b></TD>
+	<TD><b>Phones</b></TD>
+	<TD><b>Email</b></TD>
+	<TD></TD>
+	</TH>
+	<TR>
+	<TD></TD>
+	<TD><img src="{{url_for('static', filename=cont.displayPhoto)}}", width="150", height="150"></TD>
+	<TD>{{cont.fName}} {{cont.lName}}</TD>
+	<TD>{{cont.workCompany}}</TD>
+	<TD>{{cont.jobTitle}}</TD>
+	<TD><b>Mobile:</b>{{cont.mobile}}</TD>
+	<TD>{{cont.email}}</TD>
+	<TD><a href="{{url_for('index')}}">Back</a></TD>
+	</TR>
+	</table>
+	{% endblock %}
+  </div>
+</div>
